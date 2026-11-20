@@ -281,12 +281,14 @@ section{
     background-color: var(--princi-color);
     overflow: hidden;
     border-radius: var(--ten);
+    background-color: transparent;
 }
 
 .publico-box.active .btn-content{
     max-height: 200px;
     opacity: 1;
     padding: 12px;
+    
 }
 
 .box3{
@@ -300,7 +302,7 @@ section{
     display: flex;
     justify-content: space-between;
 
-    background: transparent;
+    background-color: transparent;
     cursor: pointer;
 }
 
