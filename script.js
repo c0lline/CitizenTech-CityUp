@@ -31,7 +31,7 @@ btnFacaParte.addEventListener("click", (e) => {
 
 const form = document.createElement("form");
 form.id = "form-faca-parte";
-form.innerHTML =
+form.innerHTML` =
  <input type="text" id="nome-faca-parte" placeholder="Digite seu nome">
  <button type="submit">Confirmar</button>
  `;
@@ -39,7 +39,7 @@ form.innerHTML =
 form.addEventListener("submit", (evento) => {
     evento.preventDefault();
     const input = document.getElementById("nome-faca-parte");
-    const none = input.value.trim();
+    const nome = input.value.trim();
 
     if (!nome) {
         alert("Por favor, digite seu nome!");
@@ -50,7 +50,7 @@ form.addEventListener("submit", (evento) => {
     btnFacaParte.parentElement.insertAdjacentElement("afterend", form);
     document.getElementById("nome-faca-parte"). focus();
 
-}
+})
 
 const slides = document.querySelectorAll(".slide");
 const indicadores = document.querySelectorAll(".indicador");
@@ -87,27 +87,16 @@ anterior.addEventListener("click", function() {
 
 indicadores.forEach(function(indicador, numero) {
 
-    indicador.addEventListener("click", function(
+    indicador.addEventListener("click", function() {
 
-        mostrarSlide(numero);
+    mostrarSlide(numero);
 
-    ));
+});
+});
 
-
-
-
-
-}
-
-
-)
-
-
- </input>
 
 
 
 
 });
-
 
