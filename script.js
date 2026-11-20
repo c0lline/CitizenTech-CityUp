@@ -58,11 +58,12 @@ form.addEventListener("submit", (evento) => {
  
     }
  
-    btnFacaParte.parentElement.insertAdjacentElement("afterend", form);
-    document.getElementById("nome-faca-parte"). focus();
+    alert(`Bem-vindo ao CityUp, ${nome}!`);
+    form.remove();
  
 });
  
+});
 const slides = document.querySelectorAll(".slide");
 const indicadores = document.querySelectorAll(".indicador");
 const anterior = document.querySelector(".prev");
@@ -109,5 +110,5 @@ indicadores.forEach(function(indicador, numero) {
  
  
  
-});
+
  
