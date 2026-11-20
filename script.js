@@ -6,24 +6,25 @@ boxPublis.forEach(box => {
         box.classList.toggle("active");
     });
 });
+
 const botao =
 document.querySelector(".btn2");
 const texto =
 document.querySelector("#textoNovo")
  
 botao.addEventListener("mouseenter" , () => {
-texto.display = "block";
+texto.style.display = "block";
  
  
-})
+});
  
 botao.addEventListener("mouseleave", () =>{
  
-texto.computedStyleMap.display = "none";
+texto.style.display = "none";
  
  
  
-})
+});
  
 const btnFacaParte = document.querySelector(".btn2");
 btnFacaParte.addEventListener("click", (e) => {
@@ -39,10 +40,12 @@ btnFacaParte.addEventListener("click", (e) => {
  
 const form = document.createElement("form");
 form.id = "form-faca-parte";
-form.innerHTML` =
- <input type="text" id="nome-faca-parte" placeholder="Digite seu nome">
+form.innerHTML=` 
+ <input type= "text" id="nome-faca-parte" placeholder="Digite seu nome">
  <button type="submit">Confirmar</button>
  `;
+ btnFacaParte.parentElement.insertAdjacentElement("afterend", form);
+    document.getElementById("nome-faca-parte")?.focus();
  
 form.addEventListener("submit", (evento) => {
     evento.preventDefault();
@@ -51,14 +54,14 @@ form.addEventListener("submit", (evento) => {
  
     if (!nome) {
         alert("Por favor, digite seu nome!");
-        form.remove();
+        return;
  
     }
  
     btnFacaParte.parentElement.insertAdjacentElement("afterend", form);
     document.getElementById("nome-faca-parte"). focus();
  
-})
+});
  
 const slides = document.querySelectorAll(".slide");
 const indicadores = document.querySelectorAll(".indicador");
@@ -88,7 +91,7 @@ proximo.addEventListener("click", function() {
 });
  
 anterior.addEventListener("click", function() {
- let numero = (atual + 1) % slides.length;
+ let numero = (atual - 1) % slides.length;
  mostrarSlide(numero);
  
 });
