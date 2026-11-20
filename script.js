@@ -17,8 +17,8 @@ texto.computedStyleMap.display = "none";
 
 })
 
-const btnFacaparte = document.querySelector(".btn2");
-btnFacaparte.addEventListener("click", (e) => {
+const btnFacaParte = document.querySelector(".btn2");
+btnFacaParte.addEventListener("click", (e) => {
 
     e.preventDefault();
 
@@ -67,8 +67,40 @@ function mostrarSlide(numero) {
 
     slides[atual].classList.add("active")
     indicadores[atual].classList.add("active");
+
+
 }
 
+proximo.addEventListener("click", function() {
+
+    let numero = (atual + 1) % slides.length;
+    mostrarSlide(numero);
+
+
+});
+
+anterior.addEventListener("click", function() {
+ let numero = (atual + 1) % slides.length;
+ mostrarSlide(numero);
+
+});
+
+indicadores.forEach(function(indicador, numero) {
+
+    indicador.addEventListener("click", function(
+
+        mostrarSlide(numero);
+
+    ));
+
+
+
+
+
+}
+
+
+)
 
 
  </input>
