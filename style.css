@@ -276,16 +276,47 @@ section{
     padding: 25px;
 }
 
+.publico-box{
+    width: 245px;
+    background-color: var(--princi-color);
+    overflow: hidden;
+    border-radius: var(--ten);
+}
+
+.publico-box.active .btn-content{
+    max-height: 200px;
+    opacity: 1;
+    padding: 12px;
+}
+
 .box3{
-    padding: 20px;
+    width: var(--full-size);
+    padding: 0 6px;
+    min-height: 50px;
+    align-items: center;
+    gap: 5px;
     border: 1px solid var(--sec-color);
     border-radius: var(--ten);
     display: flex;
     justify-content: space-between;
+
+    background: transparent;
+    cursor: pointer;
 }
 
 .box3 h3{
     font-weight: var(--semi-bold);
+}
+
+.btn-content{
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0 12px;
+
+    transition: max-height 0.4s ease,
+                opacity 0.3s ease,
+                padding 0.4s ease;
 }
 
 
