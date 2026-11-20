@@ -375,7 +375,7 @@ button:focus-visible {
 
 .audience-info h3 {
     color: var(--principal-green);
-    margin 20px 20px 10px;
+    margin: 20px 20px 10px;
 }
 
 .audience-info p {
